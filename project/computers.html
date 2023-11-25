@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./computers/computersStyle/computers.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="menu" class="d-flex flex-row-reverse align-items-center justify-content-between">
+    <div class="container mt-2 m-0">
+        <a class="btn" href="./main.html">Main</a>
+        <button id="addComp" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn m-1">Add Computer</button>
+        <div class="comps">
+            
+        </div>
+        
+    </div>
+</div>
+
+
+    <div class="container mt-3">
+       
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>MARK</th>
+              <th>IMG</th>
+              <th>PRICE</th>
+              <th>OPTIONS</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+    </div>
+
+    <div class="modal fade" id="myModalImg" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            
+            <div class="modal-body">
+                <img class="w-100" id="imgForModal" src="" alt="">
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl ">
+          <div class="modal-content" id="bgModalColor">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 mx-lg-auto" id="exampleModalLabel">New</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body was-validated">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="compType">
+                                    <label for="type">Type:</label>
+                                    <!-- <input id="type" class="form-control is-valid" type="text" value="Acer" required> -->
+                                    <select class="form-select is-valid" required aria-label="select example" id="type">
+                                        <option value="Acer">Acer</option>
+                                        <option value="HP">HP</option>
+                                        <option value="Asus">Asus</option>
+                                        <option value="Dell">Dell</option>
+                                        <option value="Lenovo">Lenovo</option>
+                                        <option value="LG">LG</option>
+                                        <option value="Casper">Casper</option>
+                                        <option value="Fujitsu">Fujitsu</option>
+                                        <option value="Nexus">Nexus</option>
+                                        <option value="Samsung">Samsung</option>
+                                        <option value="Toshiba">Toshiba</option>
+                                        <option value="Sony">Sony</option>
+                                    </select>
+                                </div>
+    
+                                <div class="compName">
+                                    <label for="name">Name:</label>
+                                    <input id="name" class="form-control" type="text" required>
+                                    <div class="invalid-feedback">Write correct!</div>
+                                    <div class="valid-feedback">Correct!</div>
+                                </div>
+    
+                                <div class="compPrice">
+                                    <label for="price">Price:</label>
+                                    <input id="price" class="form-control" type="number" required>
+                                    <div class="invalid-feedback">Write correct!</div>
+                                    <div class="valid-feedback">Correct!</div>
+                                </div>
+    
+                                <div class="compOpinion">
+                                    <label for="opinion">Opinion:</label>
+                                    <input id="opinion" class="form-control" type="text" required>
+                                    <div class="invalid-feedback">Write correct!</div>
+                                    <div class="valid-feedback">Correct!</div>
+                                </div>
+    
+                                <div class="compNew">
+                                    <label for="new">New:</label>
+                                    <select class="form-select is-valid" required aria-label="select example" id="new">
+                                        <option value="Yes!">Yes!</option>
+                                        <option value="No!">No!</option>
+                                    </select>
+                                </div>
+    
+                                <div class="compPhoto">
+                                    <label for="photo">Photo:</label>
+                                    <input id="photo" class="form-control" type="text" required>
+                                    <div class="invalid-feedback">Write correct!</div>
+                                    <div class="valid-feedback">Correct!</div>
+                                    <img src="" id="photoOfComp" alt="">
+                                </div>
+    
+                            </div>
+                            <div class="col-6">
+    
+                                <div class="compFullMemory">
+                                    <label for="fullMemory">Full Memory:</label>
+                                    <input id="fullMemory" class="form-control" type="number">
+                                    <div class="invalid-feedback">Write correct!</div>
+                                    <div class="valid-feedback">Correct!</div>
+                                </div>
+    
+                                <div class="compProsessor">
+                                    <label for="prosessor">Prosessor:</label>
+                                    <input id="prosessor" class="form-control" type="text" required>
+                                    <div class="invalid-feedback">Write correct!</div>
+                                    <div class="valid-feedback">Correct!</div>
+                                </div>
+    
+                                <div class="compNotFullMemory">
+                                    <label for="notFullMemory">Not Full Memory:</label>
+                                    <input id="notFullMemory" class="form-control" type="number" required>
+                                    <div class="invalid-feedback">Write correct!</div>
+                                    <div class="valid-feedback">Correct!</div>
+                                </div>
+    
+                                <div class="compTypeOfMemory">
+                                    <label for="typeOfMemory">Type of Memory:</label>
+                                    <select class="form-select is-valid" required aria-label="select example" id="typeOfMemory">
+                                        <option value="HDD">HDD</option>
+                                        <option value="SSD">SSD</option>
+                                    </select>
+                                </div>
+    
+                                <div class="compSistem">
+                                    <label for="sistem">Sistem:</label>
+                                    <input id="sistem" class="form-control" type="text" required>
+                                    <div class="invalid-feedback">Write correct!</div>
+                                    <div class="valid-feedback">Correct!</div>
+                                </div>
+                                
+                                <div class="compVideoCart">
+                                    <label for="videoCart">Video cart:</label>
+                                    <input id="videoCart" class="form-control" type="number" required>
+                                    <div class="invalid-feedback">Write correct!</div>
+                                    <div class="valid-feedback">Correct!</div>
+                                </div>
+    
+    
+                            </div>
+                        </div>
+                        
+                    </div>
+                   
+    
+    
+    
+    
+                </div>
+              
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" id="clearModal">Clear</button>
+                <button type="button" data-bs-dismiss="modal" id="save-comp" class="btn">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./code.jquery.com_jquery-3.7.1.min (1).js"></script>
+    <script src="./computers/computersScript/computers.js"></script>
+</body>
+</html>
